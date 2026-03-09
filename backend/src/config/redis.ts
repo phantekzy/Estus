@@ -1,9 +1,7 @@
-import { Redis, type RedisOptions } from "ioredis";
+import { RedisOptions } from "bullmq";
 
-const redisOption: RedisOptions = {
+export const redisConfig: RedisOptions = {
   host: process.env.REDIS_HOST || "127.0.0.1",
   port: Number(process.env.REDIS_PORT) || 6379,
   maxRetriesPerRequest: null,
 };
-
-export const connection = new Redis(redisOption);
