@@ -18,5 +18,10 @@ export const dispatchTask = async (
       attempts: 3,
       backoff: { type: "exponential", delay: 1000 },
     });
+    return res.status(202).json({
+      success: true,
+      jobId: job.id,
+      message: "Task dispatched to worker",
+    });
   } catch (error) {}
 };
