@@ -23,5 +23,11 @@ export const dispatchTask = async (
       jobId: job.id,
       message: "Task dispatched to worker",
     });
-  } catch (error) {}
+  } catch (err: any) {
+    return res.status(400).json({
+      success: false,
+      message: "Payload validation failed",
+      error: err.errors?.[0]?.message || "Invalid input",
+    });
+  }
 };
