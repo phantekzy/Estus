@@ -19,7 +19,7 @@ export const Dashboard: React.FC = () => {
                     Background Worker Dispatcher
                 </p>
             </div>
-            <form onSubmit={ } className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
 
             </form>
         </section>
