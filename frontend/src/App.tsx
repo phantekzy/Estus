@@ -1,4 +1,4 @@
-import Dashboard from "./features/Dashboard"
+import { Dashboard } from "./features/Dashboard"
 
 const App = () => {
     return (
