@@ -1,7 +1,7 @@
-const Dashboard = () => {
+export const Dashboard: React.FC = () => {
     return (
-        <div></div>
+        <section>
+
+        </section>
     )
 }
-
-export default Dashboard
