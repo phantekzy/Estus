@@ -20,7 +20,11 @@ export const Dashboard: React.FC = () => {
                 </p>
             </div>
             <form onSubmit={handleSubmit} className="space-y-6">
-
+                <div className="space-y-2">
+                    <label className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">
+                        Email
+                    </label>
+                </div>
             </form>
         </section>
     )
