@@ -56,7 +56,9 @@ export const Dashboard: React.FC = () => {
             </form>
 
             {status && (
-                <div className={`mt-6 p-4 rounded border text-xs font-mono ${}`}>
+                <div className={`mt-6 p-4 rounded border text-xs font-mono ${status.type = 'success' ? 'bg-emerald-500/10 border-emerald-500/50 text-emerald-400'
+                    : 'bg-rose-500/10 border-rose-500/50 text-rose-400'
+                    }`}>
 
                 </div>
             )}
