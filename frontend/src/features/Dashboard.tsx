@@ -36,6 +36,13 @@ export const Dashboard: React.FC = () => {
 
                 <div className="space-y-2">
                     <label className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Task Parameters</label>
+                    <textarea
+                        required
+                        rows={4}
+                        className="w-full bg-background border border-slate-700 rounded-lg p-3 focus:border-primary outline-none transition-all resize-none font-mono"
+                        placeholder="Define execution payload..."
+
+                    />
                 </div>
             </form>
         </section>
