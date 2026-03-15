@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import jobRoutes from "./routes/job.routes.js";
 import "dotenv/config";
+import "./queues/email.queue.js";
 
 const app = express();
 app.use(cors());
