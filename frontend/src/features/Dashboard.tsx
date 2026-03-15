@@ -54,6 +54,13 @@ export const Dashboard: React.FC = () => {
                     {isSubmitting ? "Loading..." : "Send"}
                 </button>
             </form>
+
+            {status && (
+                <div className={`mt-6 p-4 rounded border text-xs font-mono ${}`}>
+
+                </div>
+            )}
+
         </section>
     )
 }
