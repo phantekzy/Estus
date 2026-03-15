@@ -41,7 +41,8 @@ export const Dashboard: React.FC = () => {
                         rows={4}
                         className="w-full bg-background border border-slate-700 rounded-lg p-3 focus:border-primary outline-none transition-all resize-none font-mono"
                         placeholder="Define execution payload..."
-
+                        value={formData.content}
+                        onChange={(e) => setFormData({ ...formData, content: e.target.value })}
                     />
                 </div>
             </form>
