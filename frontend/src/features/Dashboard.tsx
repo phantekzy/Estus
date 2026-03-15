@@ -49,9 +49,9 @@ export const Dashboard: React.FC = () => {
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-primary text-slate-950"
+                    className="w-full bg-primary text-slate-950 font-black py-4 rounded-lg hover:bg-sky-300 disabled:opacity-30 disabled:cursor-not-allowed transition-all uppercase text-sm tracking-tighter "
                 >
-
+                    {isSubmitting ? "Loading..." : "Send"}
                 </button>
             </form>
         </section>
