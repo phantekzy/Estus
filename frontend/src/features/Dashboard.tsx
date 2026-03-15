@@ -14,8 +14,18 @@ export const Dashboard: React.FC = () => {
 
         try {
             const response = await jobService.dispatch(formData)
-        } catch (error) {
-
+            setStatus({
+                type: 'success',
+                msg: `${response.message}. Job ID : ${response.jobId}`
+            })
+            setFormData({ email: '', content: '' })
+        } catch (err: any) {
+            setStatus({
+                type: 'error',
+                msg: err.response?.data?.error || "Connection to Estus Engine failed.",
+            })
+        } finally {
+            setIsSubmitting(false)
         }
     }
     return (
