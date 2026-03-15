@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { JobPayload } from "../types/api.types";
 
 export const Dashboard: React.FC = () => {
-    const [fromData, setFormData] = useState<JobPayload>({ email: '', content: '' });
+    const [formData, setFormData] = useState<JobPayload>({ email: '', content: '' });
     const [status, setStatus] = useState<{ type: 'success' | 'error', msg: string } | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -31,6 +31,8 @@ export const Dashboard: React.FC = () => {
                         required
                         className="w-full bg-background border border-slate-700 rounded-lg p-3 focus:border-primary outline-none transition-all font-mono"
                         placeholder="phantekzy@mail.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                 </div>
             </form>
