@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { JobPayload } from "../types/api.types";
+import type { JobPayload } from "../types/api.types";
 
 export const Dashboard: React.FC = () => {
     const [formData, setFormData] = useState<JobPayload>({ email: '', content: '' });
@@ -23,17 +23,19 @@ export const Dashboard: React.FC = () => {
             </div>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                    <label className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">
-                        Email
-                    </label>
+                    <label className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Email</label>
                     <input
                         type="email"
                         required
                         className="w-full bg-background border border-slate-700 rounded-lg p-3 focus:border-primary outline-none transition-all font-mono"
-                        placeholder="phantekzy@mail.com"
+                        placeholder="phantekzy@sys.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
+                </div>
+
+                <div className="space-y-2">
+                    <label className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Task Parameters</label>
                 </div>
             </form>
         </section>
