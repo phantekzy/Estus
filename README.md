@@ -68,4 +68,3 @@ The system provides granular logging for lifecycle tracking:
 * [Worker] Job Execution Completed - Logic termination.
 * [Worker] Job Failed - Error stack traces for debugging.
 
-Developed by Maini Lotfi Abdelkader // 2026
