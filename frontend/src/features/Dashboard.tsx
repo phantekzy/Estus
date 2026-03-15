@@ -45,6 +45,14 @@ export const Dashboard: React.FC = () => {
                         onChange={(e) => setFormData({ ...formData, content: e.target.value })}
                     />
                 </div>
+
+                <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-primary text-slate-950"
+                >
+
+                </button>
             </form>
         </section>
     )
