@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import type { JobPayload } from "../types/api.types";
+import { jobService } from "../api/job.service";
 
 export const Dashboard: React.FC = () => {
     const [formData, setFormData] = useState<JobPayload>({ email: '', content: '' });
@@ -10,6 +11,12 @@ export const Dashboard: React.FC = () => {
         e.preventDefault();
         setIsSubmitting(true);
         setStatus(null);
+
+        try {
+            const response = await jobService.dispatch(formData)
+        } catch (error) {
+
+        }
     }
     return (
         <section className="w-full max-w-lg bg-surface border border-slate-800 p-8 rounded-2xl shadow-2xl">
